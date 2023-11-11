@@ -82,3 +82,14 @@ Error: The requested URL returned error: 404:
 Важно!: Если ваша хостовая рабочая станция - это windows ОС, то у вас могут возникнуть проблемы со вложенной виртуализацией. способы решения . Если вы устанавливали hyper-v или docker desktop то все равно может возникать ошибка: Stderr: VBoxManage: error: AMD-V VT-X is not available (VERR_SVM_NO_SVM) . Попробуйте в этом случае выполнить в windows от администратора команду: "bcdedit /set hypervisorlaunchtype off" и перезагрузиться
 
 Приложите скриншоты в качестве решения на эту задачу. Допускается неполное выполнение данного задания если не сможете совладать с Windows.
+
+К сожалению эксперементировать в Windows не особо хочется т.к. много важной информации хранится!
+
+![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/403ff4eb-a2da-4a55-a092-fdb27ad98f96)
+![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/e8610bf7-b9d2-4221-892b-bdd9f9fae273)
+![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/d1fd62bf-4d85-40a9-8f89-37267772677b)
+
+
+
+
+
