@@ -24,7 +24,7 @@
 ![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/3957d617-2775-4029-a938-295c717d8dc3)
 
 
-![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/028f61fa-a25b-4e5f-87a4-4c5a536bff0f
+![image](https://github.com/AlexanderSchelokov/devops-netology/assets/121572590/028f61fa-a25b-4e5f-87a4-4c5a536bff0f)
 
 ***
 
