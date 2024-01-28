@@ -39,8 +39,12 @@
 В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
 https://github.com/AlexanderSchelokov/devops-netology/tree/main/ansible/clickhouse-role
+
 https://github.com/AlexanderSchelokov/devops-netology/tree/main/ansible/lighthouse-role
+
 https://github.com/AlexanderSchelokov/devops-netology/tree/main/ansible/vector-role
+
+https://github.com/AlexanderSchelokov/devops-netology/tree/main/ansible/08-ansible-04-role
 
 
 
