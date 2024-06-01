@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      volumes:
+      - name: shared-data
+        persistentVolumeClaim:
+          claimName: my-pvc
+      containers:
+      - name: busybox-container
+        image: dockerhub.timeweb.cloud/library/busybox
+        command: ["sh", "-c", "while true; do echo 'Hello netology' >> /data/data.txt; sleep 5; done"]
+        volumeMounts:
+        - name: shared-data
+          mountPath: /data
+      - name: multitool-container
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool:latest
+        command: ["sh", "-c", "tail -f /data/data.txt"]
+        volumeMounts:
+        - name: shared-data
+          mountPath: /data
+        ports:
+        - containerPort: 8080
+        env:
+        - name: HTTP_PORT
+          value: "1180"
+
