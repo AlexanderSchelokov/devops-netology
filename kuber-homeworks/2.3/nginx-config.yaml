@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-configmap
+data:
+  multitool-container_port: "1180"
+  multitool-container_port_ssl: "11443"
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>Hello World!</h1>
+    </body>
+    </html>
+

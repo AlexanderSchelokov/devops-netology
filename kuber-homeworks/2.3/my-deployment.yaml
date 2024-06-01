@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    app: app-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-pod
+  template:
+    metadata:
+      labels:
+        app: app-pod
+    spec:
+      containers:
+      - name: nginx-container
+        image: dockerhub.timeweb.cloud/library/nginx
+        ports:
+          - containerPort: 80
+        volumeMounts:
+        - name: configmap-volume
+          mountPath: /usr/share/nginx/html
+      - name: multitool-container
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool
+        ports:
+          - name: http-port
+            containerPort: 1180
+          - name: https-port
+            containerPort: 11443
+        env:
+          - name: HTTP_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: my-configmap
+                key: multitool-container_port
+          - name: HTTPS_PORT
+            valueFrom:
+                configMapKeyRef:
+                  name: my-configmap
+                  key: multitool-container_port_ssl
+      volumes:
+      - name: configmap-volume
+        configMap:
+          name: my-configmap
